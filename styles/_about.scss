@@ -1,0 +1,42 @@
+.panel-one {
+  background: linear-gradient(to bottom left, $light, white);
+  section {
+    display: flex;
+  }
+  p {
+    color: $dark;
+  }
+}
+
+.introduction {
+  flex: 3;
+}
+
+.photo {
+  background: radial-gradient(black, $primary);
+  filter: drop-shadow(0px 5px 3px gray);
+  -webkit-filter: drop-shadow(0px 5px 3px gray);
+  display: block;
+  overflow: hidden;
+  height: 450px;
+  width: 450px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0px 5px 3px black);
+    -webkit-filter: drop-shadow(0px 5px 3px black);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .photo {
+      height: 350px;
+      width: 350px;
+  }
+}
