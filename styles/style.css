@@ -124,6 +124,63 @@ nav {
   }
 }
 
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5%;
+}
+
+.flip-card-front p,
+.flip-card-back p {
+  font-size: 22px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #156FCE;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -151,6 +208,14 @@ section {
           align-items: center;
 }
 
+section h1 {
+  margin: 2vh 0;
+}
+
+section p {
+  line-height: 125%;
+}
+
 h1 {
   font-size: 50px;
   color: #156FCE;
@@ -176,6 +241,71 @@ p {
   color: #dddddd;
 }
 
+.resume-icons {
+  margin: 2vh 0;
+  height: 15vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(auto-fill, minmax(25%, 1fr));
+      grid-template-columns: minmax(auto-fill, minmax(25%, 1fr));
+      grid-template-areas: "icon1 icon2 icon3";
+}
+
+.resume-icons img {
+  height: 75%;
+  width: auto;
+}
+
+.resume-preview {
+  height: 60%;
+  display: block;
+  overflow: hidden;
+}
+
+.resume-preview a {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.resume-preview a img {
+  height: 75%;
+  transform: rotate(17deg);
+  -webkit-transform: rotate(17deg);
+  -moz-transform: rotate(17deg);
+  -ms-transform: rotate(17deg);
+  -o-transform: rotate(17deg);
+}
+
+.info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.info div img {
+  height: 70%;
+  width: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .projects {
   height: 75vh;
   display: -ms-grid;
@@ -189,35 +319,18 @@ p {
 
 .project {
   cursor: pointer;
-  border-radius: 5%;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
   max-height: 35vh;
+  border-radius: 5%;
   -webkit-border-radius: 5%;
   -moz-border-radius: 5%;
   -ms-border-radius: 5%;
   -o-border-radius: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: -webkit-gradient(linear, left top, right bottom, from(#fafafa), color-stop(#ebebf0), to(#c8c8cd));
   background: linear-gradient(to bottom right, #fafafa, #ebebf0, #c8c8cd);
   -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 35px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 35px rgba(0, 0, 0, 0.2);
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-}
-
-.project:hover {
-  background: -webkit-gradient(linear, left top, right bottom, from(#c8c8cd), color-stop(#ebebf0), to(#fafafa));
-  background: linear-gradient(to bottom right, #c8c8cd, #ebebf0, #fafafa);
-  color: #156FCE;
 }
 
 .panel-four {
@@ -226,5 +339,46 @@ p {
 
 .panel-four p {
   color: #dddddd;
+}
+
+.panel-four a {
+  color: #156FCE;
+  text-decoration: none;
+  animation: glisten 1s ease;
+  -webkit-animation: glisten 1s ease infinite alternate;
+}
+
+.panel-four a:hover {
+  color: #dddddd;
+}
+
+@-webkit-keyframes glisten {
+  0% {
+    background: -webkit-gradient(linear, left top, right top, from(#156FCE), to(#63adfc));
+    background: linear-gradient(to right, #156FCE, #63adfc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, right top, from(#63adfc), to(#156FCE));
+    background: linear-gradient(to right, #63adfc, #156FCE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes glisten {
+  0% {
+    background: -webkit-gradient(linear, left top, right top, from(#156FCE), to(#63adfc));
+    background: linear-gradient(to right, #156FCE, #63adfc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, right top, from(#63adfc), to(#156FCE));
+    background: linear-gradient(to right, #63adfc, #156FCE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 /*# sourceMappingURL=style.css.map */

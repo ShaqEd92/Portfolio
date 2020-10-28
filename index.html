@@ -41,10 +41,12 @@
     <div class="panel-one" id="about">
         <section>
             <div class="introduction">
+                <p>I am</p>
                 <h1>Shaquille Edwards</h1>
-                <p>I'm a software developer with experience building full-stack applications in Spring Boot (Java) and
-                    C#/.NET, using Angular and React. A highly-motivated and enthusiastic learner, I enjoy exploring new
-                    technologies, optimizing my code, and incorporating feedback for the best user-experience.
+                <p>A software developer with experience building full-stack applications using technologies such as
+                    Java, Spring Boot, C#/.NET, and React. A highly-motivated and enthusiastic learner, I enjoy
+                    exploring new technologies, optimizing my code, and incorporating feedback for the best
+                    user-experience.
             </div>
             <div class="photo">
                 <img src="./images/photo-self.png" alt="">
@@ -57,18 +59,16 @@
             <div class="resume-text">
                 <h1>Check out my resume</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam beatae dicta reprehenderit ad provident
-                    maiores culpa numquam? Placeat aperiam laboriosam, laborum at incidunt perspiciatis inventore
-                    assumenda.
-                    Tempora assumenda, nesciunt placeat iure dolore repellendus, odit dolores laborum molestias quidem
-                    magni
-                    blanditiis.
+                    Brains. Books. Booleans. Take a look at my journey to becoming a developer...
                 </p>
+                <div class="resume-icons">
+                    <img src="./images/brainstorm.svg" alt="brain">
+                    <img src="./images/book.svg" alt="books">
+                    <img src="./images/coding.svg" alt="coding brackets">
+                </div>
             </div>
             <div class="resume-preview">
-                <a href="./files/resume.pdf" target="_blank"> <button class="window">
-                        <p>RESUME</p>
-                    </button> </a>
+                <a href="./files/resume.pdf" target="_blank"> <img src="./images/resume.svg" alt="resume"> </a>
             </div>
         </section>
     </div>
@@ -77,41 +77,63 @@
         <section>
             <div class="info">
                 <h1>Look through my portfolio</h1>
-                <br>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex accusamus optio magni neque consequuntur ducimus dolorem vel nemo sed eveniet.</p>
+                <div>
+                    <img src="./images/undraw_web_developer.svg" alt="person coding">
+                </div>
             </div>
             <div class="projects">
-                <div class="project">
-                    <h2>Trivia</h2>
-                    <p>
-                        <span style="text-decoration: underline;">Technologies</span>: React (w/ Hooks)
-                        <a href="https://github.com/ShaqEd92/React-Trivia-API" target="_blank">GitHub</a>
-                    </p>
+                <div class="project flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h2>Trivia</h2>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>
+                                React Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus sed iusto ab
+                                libero tenetur nemo?. <a href="https://github.com/ShaqEd92/React-Trivia-API"
+                                    target="_blank">Check it out here.</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="project">
-                    <h2>
-                        The Quotes-Repo
-                    </h2>
-                    <p>
-                        <span style="text-decoration: underline;">Technologies</span>: React, Java, Spring Boot, MySQL
-                        <a href="https://github.com/ShaqEd92/React-Spring-Quotes" target="_blank">GitHub</a>
-                    </p>
+                <div class="project flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h2>The Quotes-Repo</h2>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>
+                                React, Java, Spring Boot, MySQL
+                                <a href="https://github.com/ShaqEd92/React-Spring-Quotes" target="_blank">GitHub</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="project">
-                    <h2>Stacks!</h2>
-                    <p>
-                        <span style="text-decoration: underline;">Technologies</span>: C#, ASP.NET Core, MySQL,
-                        Bootstrap,
-                        JQuery
-                        <a href="https://github.com/ShaqEd92/Books-App" target="_blank">GitHub</a>
-                    </p>
+                <div class="project flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h2>Stacks!</h2>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>
+                                C#/.NET Core, SQL, JQuery
+                                <a href="https://github.com/ShaqEd92/Books-App" target="_blank">GitHub</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="project">
-                    <h2>Mental-Math</h2>
-                    <p>
-                        <span style="text-decoration: underline;">Technologies</span>: React (w/ Hooks)
-                        <a href="https://github.com/ShaqEd92/Mental-Math" target="_blank">GitHub</a>
-                    </p>
+                <div class="project flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h2>Mental-Math</h2>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>
+                                MongoDb, Express.js, Angular, Node.js
+                                <a href="https://github.com/ShaqEd92/Mental-Math" target="_blank">GitHub</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -119,19 +141,15 @@
 
     <div class="panel-four" id="contact">
         <section>
-            <h1>Have an opportunity? Contact me</h1>
+            <h1>Have an opportunity? <a href="mailto:shaqhaedwards@gmail.com" target="_top">Contact me</a></h1>
         </section>
     </div>
 
-    <!-- <div>
+    <!-- <div class="footer">
         <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
                 href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
         <p>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel
                 perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
-        Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a>
-        from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-        Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a>
-        from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
     </div> -->
 
 </body>
