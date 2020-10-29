@@ -51,6 +51,23 @@
   font-size: 1.5em;
 }
 
+@media (max-width: 576px) {
+  .panel-three {
+    height: 150vh !important;
+    section {
+      height: 135vh !important;
+    }
+  }
+  .projects {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 115vh !important;
+    .project{
+      height: 50vh;
+    }
+  }
+}
+
 @media (max-width: 866px) {
   .panel-three {
     display: flex;

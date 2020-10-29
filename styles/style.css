@@ -393,6 +393,28 @@ nav {
   font-size: 1.5em;
 }
 
+@media (max-width: 576px) {
+  .panel-three {
+    height: 150vh !important;
+  }
+  .panel-three section {
+    height: 135vh !important;
+  }
+  .projects {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    height: 115vh !important;
+  }
+  .projects .project {
+    height: 50vh;
+  }
+}
+
 @media (max-width: 866px) {
   .panel-three {
     display: -webkit-box;
