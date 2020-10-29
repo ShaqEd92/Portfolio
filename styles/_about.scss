@@ -34,9 +34,29 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 576px) {
+  .panel-one {
+    align-items: flex-end;
+    border-top: 5px solid transparent;
+  }
+}
+
+@media (max-width: 992px) {
   .photo {
-      height: 350px;
-      width: 350px;
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .photo {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .photo {
+    height: 300px;
+    width: 300px;
   }
 }

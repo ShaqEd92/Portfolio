@@ -1,0 +1,28 @@
+.panel-four {
+  background: $dark;
+  p {
+    color: $light;
+  }
+  a {
+    &:hover {
+      color: $light;
+    }
+    color: $primary;
+    text-decoration: none;
+    animation: glisten 1s ease;
+    -webkit-animation: glisten 1s ease infinite alternate;
+  }
+}
+
+@keyframes glisten {
+  0% {
+    background: linear-gradient(to right, $primary, #63adfc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: linear-gradient(to right, #63adfc, $primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
