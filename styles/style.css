@@ -96,6 +96,7 @@ nav {
   }
   header {
     overflow: visible;
+    background: transparent;
   }
   .nav-links {
     position: fixed;
@@ -201,15 +202,6 @@ nav {
      object-fit: cover;
   filter: drop-shadow(0px 5px 3px black);
   -webkit-filter: drop-shadow(0px 5px 3px black);
-}
-
-@media (max-width: 576px) {
-  .panel-one {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    border-top: 5px solid transparent;
-  }
 }
 
 @media (max-width: 992px) {

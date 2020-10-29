@@ -53,9 +53,6 @@ nav {
 }
 
 @media (max-width: 768px) {
-  // nav {
-  //   display: none;
-  // }
   .logo-container {
     display: none;
   }
@@ -79,6 +76,8 @@ nav {
   }
   header {
     overflow: visible;
+    background: transparent;
+    
   }
   .nav-links {
     position: fixed;
@@ -103,13 +102,11 @@ nav {
     -o-transition: all 1s ease-out;
     pointer-events: none;
   }
-
   .nav-links.open {
     clip-path: circle(1400px at 90% -25%);
     -webkit-clip-path: circle(1400px at 90% -25%);
     pointer-events: all;
   }
-
   .nav-link {
     color: $primary;
     outline-style: none;
